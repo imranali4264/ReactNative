@@ -7,14 +7,16 @@
  * @lint-ignore-every XPLATJSCOPYRIGHT1
  */
 
-import React, { Component } from "react";
-import { AppRegistry } from "react-native";
-import Header from "./src/components/Header";
+import React from "react";
+import { View } from "react-native";
+import Header from "./src/components/Headers";
+import AlbumList from "./src/components/AlbumList";
 
-export default class App extends Component {
-  render() {
-    return <Header headerText={"ERP"} />;
-  }
-}
+const App = () => (
+  <View style={{ flex: 1 }}>
+    <Header headerText={"Albums"} />
+    <AlbumList />
+  </View>
+);
 
-AppRegistry.registerComponent("erpand", () => App);
+export default App;
